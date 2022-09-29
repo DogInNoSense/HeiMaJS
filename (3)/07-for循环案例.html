@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 求1-100之间所有数的平均值
+        for (var i = 2, sum = 1; i <= 100; i++) {
+            sum = sum + i
+        }
+        console.log(sum / 100);
+
+        // 求所有偶数和奇数的和
+        for (var i = 2, sum1 = 0, sum2 = 0; i <= 100; i += 2) {
+            sum1 = sum1 + i;
+        }
+        console.log('奇数和是' + sum1);
+
+        for (var j = 1, sum2 = 0; j <= 100; j = j + 2) {
+            sum2 = sum2 + j;
+        }
+        console.log('偶数和是' + sum2);
+        // 求1-100之间所有能被3整除的数字和
+        for (var i = 1, sum = 0; i <= 100; i++) {
+            if (i % 3 == 0) {
+                sum = sum + i;
+            }
+        }
+        console.log(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 1.用我们的布尔值参与的逻辑运算 true && false == false
+    // 2.123 && 456 值或者表达式参与逻辑运算
+    // 当有多个表达式时，左边的表达式可以确定结果时，就不再继续运算右边的表达式的值；
+    // 语法：表达式1 && 表达式2 如果第一个表达式的值为真，则返回表达式2，如果第一个表达式的值为假，则返回表达式1
+    console.log(123 && 456);
+    console.log(0 && 456);
+    console.log(0 && 1 + 2 && 456 * 56789);
+    console.log('' && 1 + 2 && 456 * 456);
+    // 3.逻辑或 短路运算 如果表达式1结果为真，则返回的是表达式1，如果表达式1结果为假，则返回表达式2
+    console.log(123 || 456);
+    console.log(123 || 456 || 789);
+    console.log(0 || 456 || 456 + 123);
+    var num = 0;
+    console.log(123 || num++);
+    console.log(num);
+</script>
+
+<body>
+
+</body>
+
+</html>

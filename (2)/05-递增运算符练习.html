@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 10;
+        ++a;
+        var b = ++a + 2; //14
+        console.log(b)
+
+        var c = 10;
+        c++;
+        var d = c++ + 2; //12
+        console.log(d);
+
+        var e = 10;
+        var f = e++ + ++e; //e++先返回原值10后变成11，++e变为12，结果22
+        console.log(f);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

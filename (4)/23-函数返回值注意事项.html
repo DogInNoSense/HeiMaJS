@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.return 终止函数
+        function getSum(num1, num2) {
+            return num1 + num2;
+            alert('我不会被执行!')
+        }
+        console.log(getSum(1, 2));
+        // 2.return只能返回一个值 返回的是最后一个值
+        // 3.
+        function getResult(num1, num2) {
+            return [num1 + num2, num1 - num2, num1 * num2, num1 / num2]; //返回的是一个数组
+        }
+        console.log(getResult(1, 2));
+        // 4.如果函数有return 则返回的是return后面的值,如果函数没有return则返回undefined
+        function fun() {
+
+        }
+        console.log(fun());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
