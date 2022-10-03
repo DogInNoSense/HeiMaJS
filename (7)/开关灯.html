@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .black {
+            background-color: black;
+        }
+        
+        .white {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body class="black">
+    <div>
+        <button class="btn">开关</button>
+    </div>
+
+    <script>
+        var btn = document.querySelector('.btn');
+        var bgd = document.querySelector('.black');
+        var flag = 1;
+        btn.onclick = function() {
+            if (flag == 0) {
+                bgd.className = 'black';
+                flag = 1;
+
+            } else {
+                bgd.className = 'white';
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
