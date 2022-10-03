@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        
+        .change {
+            background-color: purple;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,11 +28,15 @@
         // 1.使用element.style 获得修改元素样式 如果样式比较少 或者 功能简单的情况下使用
         var test = document.querySelector('div');
         test.onclick = function() {
-            this.style.backgroundColor = 'purple';
-            this.style.color = '#fff';
-            this.style.fontSize = '25px';
-            this.style.marginTop = '100px';
+            // this.style.backgroundColor = 'purple';
+            // this.style.color = '#fff';
+            // this.style.fontSize = '25px';
+            // this.style.marginTop = '100px';
 
+
+            // 让我们当前元素的类名改成了change
+            this.className = 'change';
+            // 适合于样式较多或者功能比较复杂的情况
         }
     </script>
 
