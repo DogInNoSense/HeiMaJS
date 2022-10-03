@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>文本</div>
+    <script>
+        // 1.使用element.style 获得修改元素样式 如果样式比较少 或者 功能简单的情况下使用
+        var test = document.querySelector('div');
+        test.onclick = function() {
+            this.style.backgroundColor = 'purple';
+            this.style.color = '#fff';
+            this.style.fontSize = '25px';
+            this.style.marginTop = '100px';
+
+        }
+    </script>
+
+</body>
+
+</html>
