@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id='j_cbAll' />
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPad Pro</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPad Air</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>Apple watch</td>
+                    <td>2000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        // 1.全选和取消全选 
+        // 获取元素
+        var j_cbAll = document.getElementById('j_cbAll'); // 全选按钮
+        var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
+        // 2.注册事件
+        j_cbAll.onclick = function() {
+            // console.log(this.checked); // 可以得到当前的选中状态 true代表选中
+            for (var i = 0; i < j_tbs.length; i++) {
+                j_tbs[i].checked = this.checked;
+            }
+        }
+        for (var i = 0; i < j_tbs.length; i++) {
+
+            j_tbs[i].onclick = function() {
+                // 每一次点击下面的复选框都要循环检查4个按钮是否都被全部选中
+                for (var i = 0; i < j_tbs.length; i++) {
+                    var flag = true; // 控制全选按钮是否选中
+                    if (!j_tbs[i].checked) {
+                        flag = false;
+                        // 如果有没选中的,就给flag false
+                    }
+                    j_cbAll.checked = flag;
+
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
