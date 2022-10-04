@@ -72,10 +72,10 @@
                     var flag = true; // 控制全选按钮是否选中
                     if (!j_tbs[i].checked) {
                         flag = false;
-                        // 如果有没选中的,就给flag false
+                        break;
+                        // 如果有没选中的,就给flag false 只要有一个没选中 退出for循环
                     }
                     j_cbAll.checked = flag;
-
                 }
             }
 
