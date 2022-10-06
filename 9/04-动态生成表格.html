@@ -48,5 +48,34 @@
             subject: 'javascript',
             score: 77
         }];
+
+        // 2.往tbody里面创建行,有几个人创建几行
+        var tbody = document.querySelector('tbody');
+        for (var i = 0; i < datas.length; i++) {
+            // 往tbody创建tr行
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            // 行里面创建单元格 
+            for (var k in datas[i]) {
+                // 创建单元格
+                var td = document.createElement('td');
+                // 把属性值给td
+                td.innerHTML = datas[i][k];
+                tr.appendChild(td);
+            }
+            // 3.创建有删除两个字的单元格(追加)
+            var td = document.createElement('td');
+            td.innerHTML = '<a href= "javascript:;">删除</a>';
+            tr.appendChild(td);
+
+        }
+        // 4.删除操作
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function() {
+                // 删除当前所在的行 node.removeChild(child)
+                tbody.removeChild(this.parentNode.parentNode); // a标签的爸爸是行td td的爸爸是行tr tr是tbody的儿子
+            }
+        }
     </script>
 </body>
