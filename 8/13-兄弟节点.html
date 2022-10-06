@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <script>
+        var div = document.querySelector('div');
+        // 得到下一个兄弟节点包含元素节点 文本节点
+        console.log(div.nextSibling);
+        console.log(div.previousSibling);
+
+        // 以下IE9以上支持
+        // 得到下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        // 得到上一个兄弟元素节点
+        console.log(div.previousElementSibling);
+    </script>
+
+</body>
+
+</html>
