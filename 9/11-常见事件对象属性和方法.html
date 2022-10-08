@@ -21,12 +21,14 @@
         var div = document.querySelector('div');
         div.addEventListener('click', function(e) {
             console.log(e.target);
+
             console.log(this);
         })
 
         var ul = document.querySelector('ul');
         ul.addEventListener('click', function(e) {
             console.log(this);
+            console.log(e.currentTarget); // 和this类似
             // e.target 指向我们点击的那个对象 谁触发了这个事件 我们点击的是li e.target 指向的就是li this返回的是ul
             console.log(e.target);
         })
