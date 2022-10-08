@@ -21,12 +21,13 @@
         })
 
 
-        // 2.keydown 按键按下的时候触发
+        // 2.keydown 按键按下的时候触发 
         document.addEventListener('keydown', function() {
-            console.log('我按下了');
+            console.log('我按下了down');
         })
 
-        // 3.keypress 按键按下的时候触发
+        // 3.keypress 按键按下的时候触发 不能识别功能键 比如 ctrl shift 左右箭头
+        // 4.三个事件的执行顺序keydown->keypress->keyup
         document.addEventListener('keydown', function() {
             console.log('我按下了press');
         })
