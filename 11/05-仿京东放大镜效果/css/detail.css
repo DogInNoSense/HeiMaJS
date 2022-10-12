@@ -37,7 +37,7 @@
 }
 
 .big {
-    /* display: none; */
+    display: none;
     position: absolute;
     left: 410px;
     top: 0;
@@ -48,6 +48,12 @@
     /* 提高显示层级999 */
     border: 1px solid #ccc;
     overflow: hidden;
+}
+
+.big img {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .preview_list {
