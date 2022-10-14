@@ -3,9 +3,9 @@ window.addEventListener('load', function() {
     var arrowl = document.querySelector('.arrow-l')
     var arrowr = document.querySelector('.arrow-r')
     var focus = document.querySelector('.focus')
-    var focuswidth = focus.clientWidth
-        // 2.绑定事件
-        // 鼠标经过按钮显示
+    var focuswidth = focus.clientWidth;
+    // 2.绑定事件
+    // 鼠标经过按钮显示
     focus.addEventListener('mouseover', function() {
             arrowl.style.display = 'block'
             arrowr.style.display = 'block'
@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
                 ol.children[i].className = ''
             }
             this.className = 'current'
-                // 点击小圆圈，移动图片，是ul在移动
+                // 5.点击小圆圈，移动图片，ul在移动
                 // ul移动的距离是小圆圈的索引号*图片的宽度，注意是负值
                 // 当点击了某个li,就拿到当前li的自定义属性data-index
             var dataindex = this.getAttribute('data-index')
@@ -50,10 +50,11 @@ window.addEventListener('load', function() {
         })
     }
     ol.children[0].className = 'current';
-    // 克隆第一张图片放到li后面
+    // 6.克隆第一张图片(li)放到ul最后面
+    // 深拷贝
     var first = ul.children[0].cloneNode(true)
     ul.appendChild(first)
-        // 点击右侧按钮，图片移动
+        // 7.点击右侧按钮，图片滚动一张
     var num = 0;
     // 控制小圆圈的播放
     var circle = 0;
