@@ -1,0 +1,139 @@
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    padding: 2px 14px;
+    border-left: 1px solid #b1191a;
+}
+
+.nav {
+    overflow: hidden;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sk_con ul li {
+    float: left;
+}
+
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 25px;
+    font-size: 14px;
+}
+
+.sk_con ul li:last-child a::after {
+    content: '';
+    font-family: 'icomoon';
+
+}
+
+.sk_con {
+    float: left
+}
+
+.sk_container .sk_bd ul li {
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin-right: 13px;
+    margin-top: 25px;
+    border: 1px solid transparent;
+}
+
+.sk_container .sk_bd ul li h1 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
+.sk_container .sk_bd ul li:hover {
+    border: 1px solid #b1191a;
+}
+
+.container_bd {
+    margin: 8px 12px 0;
+}
+
+.container_bd h2 {
+    margin-bottom: 5px;
+}
+
+.container_bd h2 span:first-of-type {
+    font-size: 22px;
+    color: #e60012;
+    font-weight: 700;
+}
+
+.container_bd h2 span:nth-of-type(2) {
+    font-size: 14px;
+    color: #a4a4a4;
+}
+
+.container_bd h2 i:first-of-type {
+    font-size: 14px;
+    color: #e60012;
+}
+
+.container_bd h2 i:nth-of-type(2) {
+    font-size: 14px;
+    color: #a4a4a4;
+}
+
+.container_bd .yishou {
+    display: inline-block;
+}
+
+.container_bd .jingdu {
+    display: inline-block;
+    width: 132px;
+    height: 12px;
+    margin: 0 13px;
+    border: 1px solid #e12228;
+    border-radius: 6px;
+
+}
+
+.container_bd .zhong {
+    width: 117px;
+    height: 10px;
+    background-color: #e12228;
+    border-radius: 6px 0 0 6px;
+}
+
+.buy {
+    width: 290px;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #b1191a;
+}
+
+
+.sk_container .sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_container .sk_bd ul li:nth-child(n+13) {
+    margin-bottom: 280px;
+}

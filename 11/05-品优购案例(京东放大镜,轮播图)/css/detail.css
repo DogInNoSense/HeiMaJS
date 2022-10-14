@@ -1,0 +1,91 @@
+        .nav .dropdown .dd {
+            display: none;
+        }
+        
+        .crumb_wrap {
+            padding: 28px 0 10px;
+            font-size: 12px;
+            font-family: SimSun, SimSun-Regular;
+            font-weight: 400;
+            text-align: left;
+        }
+        
+        .product_intro .preview_wrap .preview_img {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            line-height: 400px;
+            text-align: center;
+            border: 1px solid #EDEDED;
+            cursor: move;
+        }
+        
+        .mask {
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            opacity: .5;
+        }
+        
+        .big {
+            position: absolute;
+            display: none;
+            top: 0;
+            right: -510px;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            z-index: 99;
+            border: 1px solid #EDEDED;
+            overflow: hidden;
+        }
+        
+        .big img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        /* 轮播图开始 */
+        
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        /* 轮播图结束 */
+        
+        .preview_list {
+            width: 402px;
+            height: 58px;
+            margin-top: 64px;
+        }
+        
+        .preview_list p {
+            margin-top: 27px;
+        }
+        
+        .preview_list p i:nth-child(2) {
+            background: url(../images/精灵图2.png) no-repeat;
+        }
