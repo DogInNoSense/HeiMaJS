@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        
+        span {
+            /* 必须加定位 */
+            position: absolute;
+            left: 0;
+            top: 200px;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn700">点击xyz移动到700</button>
+    <button class="btn900">点击xyz移动到900</button>
+
+    <div> </div>
+    <span>xyz</span>
+    <script>
+        function animate(obj, target, callback) {
+            // console.log(callback); // callback = function(){} 调用的时候callback()
+            clearInterval(obj.timer);
+            // 改变步长值 (目标值-现在的位置)/10
+            obj.timer = setInterval(function() {
+                // var step = Math.ceil((target - obj.offsetLeft) / 10);
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+
+                    clearInterval(obj.timer);
+                    // 回调函数写到计时器里面
+                    if (callback) {
+                        // 调用回调函数
+                        callback();
+                    }
+                }
+
+
+                obj.style.left = obj.offsetLeft + step + 'px';
+
+
+            }, 15)
+        }
+
+        var span = document.querySelector('span');
+        var btn700 = document.querySelector('.btn700');
+        var btn900 = document.querySelector('.btn900');
+
+
+        btn700.addEventListener('click', function() {
+            animate(span, 700);
+        })
+        btn900.addEventListener('click', function() {
+                animate(span, 900, function() {
+                    // alert('动画结束!')
+                    span.style.background = 'red';
+                });
+            })
+            // 匀速动画 就是盒子的位置加固定的值
+            // 缓动动画 盒子的当前位置加变化的值
+    </script>
+</body>
+
+</html>
