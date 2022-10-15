@@ -125,6 +125,7 @@ div {
     bottom: 5px;
     right: 5px;
     margin: 0;
+    transition: all .3s;
 }
 
 .focus ol li {
