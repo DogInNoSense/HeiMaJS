@@ -39,11 +39,13 @@ window.addEventListener('load', function() {
         ol.appendChild(li);
         // 4.小圆圈的排他思想,我们可以直接在生成小圆圈的同时直接绑定点击事件
         li.addEventListener('click', function() {
+
             for (var i = 0; i < ol.children.length; i++) {
                 // 把所有的li清除类名
                 ol.children[i].className = '';
             }
             this.className = 'current';
+
             // 5.点击小圆圈，移动图片，ul在移动
             // ul移动的距离是小圆圈的索引号*图片的宽度，注意是负值
             // 当点击了某个li,就拿到当前li的自定义属性data-index
@@ -129,6 +131,9 @@ window.addEventListener('load', function() {
         }
         // 留下当前的小圆圈的current类名
         ol.children[circle].className = 'current';
+        // ol.querySelector('.current').classList.remove('current');
+        // ol.children[circle].classList.add('current');
+        // 上面两行代码也可以实现
     }
 
 
