@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: black;
+}
+
+.c-nav {
+    width: 900px;
+    height: 42px;
+    background: #fff url(images/rss.png) no-repeat right center;
+    margin: 100px auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+.c-nav ul {
+    position: absolute;
+}
+
+.c-nav li {
+    float: left;
+    width: 83px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.c-nav li a {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    height: 42px;
+}
+
+.c-nav li a:hover {
+    color: white;
+}
+
+.c-nav li.current a {
+    color: #0dff1d;
+}
+
+.cloud {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 83px;
+    height: 42px;
+    background: url(./images/cloud.jpg) no-repeat;
+}
