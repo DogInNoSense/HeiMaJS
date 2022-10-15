@@ -63,47 +63,63 @@ window.addEventListener('load', function() {
     // 7.点击右侧按钮，图片滚动一张
     var num = 0;
     var circle = 0;
+    var flag = true;
+    // flag节流阀
     // circle控制小圆圈的播放
 
 
     // 8.右侧按钮做法
     arrowr.addEventListener('click', function() {
         // 如果走到最后一张复制的图，此时ul快速复原 left改为0
-        if (num == ul.children.length - 1) {
-            ul.style.left = 0;
-            num = 0;
+        if (flag) {
+            flag = false;
+            // 关闭节流阀
+            if (num == ul.children.length - 1) {
+                ul.style.left = 0;
+                num = 0;
+            }
+            num++;
+            animate(ul, -num * focuswidth, function() {
+                flag = true;
+            });
+
+            // 点击右侧按钮，小圆圈跟随变化
+            circle++;
+            // 如果circle == 4 则复原
+            if (circle == ol.children.length) {
+                circle = 0;
+            }
+            // 排他思想
+            // 先清除其余小圆圈的current
+            circleChange();
         }
-        num++;
-        animate(ul, -num * focuswidth);
-        // 点击右侧按钮，小圆圈跟随变化
-        circle++;
-        // 如果circle == 4 则复原
-        if (circle == ol.children.length) {
-            circle = 0;
-        }
-        // 排他思想
-        // 先清除其余小圆圈的current
-        circleChange();
+
+
     });
 
 
     // 9.左侧按钮做法
     arrowl.addEventListener('click', function() {
-        if (num == 0) {
-            num = ul.children.length - 1;
-            ul.style.left = -num * focuswidth + 'px';
+        if (flag) {
+            flag = false;
+            if (num == 0) {
+                num = ul.children.length - 1;
+                ul.style.left = -num * focuswidth + 'px';
 
+            }
+            num--;
+            animate(ul, -num * focuswidth, function() {
+                flag = true;
+            });
+            // 点击左侧按钮，小圆圈跟随变化
+            circle--;
+            // 如果circle<0 说明第一张图片,小圆圈要改为第4个小圆圈
+            // if (circle < 0) {
+            //     circle = ol.children.length - 1;
+            // }
+            circle < 0 ? ol.children.length - 1 : circle;
+            circleChange();
         }
-        num--;
-        animate(ul, -num * focuswidth);
-        // 点击左侧按钮，小圆圈跟随变化
-        circle--;
-        // 如果circle<0 说明第一张图片,小圆圈要改为第4个小圆圈
-        // if (circle < 0) {
-        //     circle = ol.children.length - 1;
-        // }
-        circle < 0 ? ol.children.length - 1 : circle;
-        circleChange();
     })
 
 
