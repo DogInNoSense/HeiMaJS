@@ -101,16 +101,30 @@ div {
 .focus {
     position: relative;
     padding-top: 44px;
+    overflow: hidden;
 }
 
 .focus img {
     width: 100%;
 }
 
+.focus ul {
+    overflow: hidden;
+    width: 500%;
+    margin-left: -100%;
+    /* 相对于父亲focus 100% 也就是和屏幕一样宽*/
+}
+
+.focus ul li {
+    float: left;
+    width: 20%;
+}
+
 .focus ol {
     position: absolute;
     bottom: 5px;
     right: 5px;
+    margin: 0;
 }
 
 .focus ol li {
