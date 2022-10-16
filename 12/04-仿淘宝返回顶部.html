@@ -71,30 +71,31 @@
         var goBack = document.querySelector('.goBack');
         // 2.页面滚动事件
         document.addEventListener('scroll', function() {
-                // console.log(11);
-                // window.pageYOffset页面被卷去的头部
-                console.log(window.pageYOffset);
+            // console.log(11);
+            // window.pageYOffset页面被卷去的头部
+            console.log(window.pageYOffset);
 
-                if (window.pageYOffset >= bannerTop) {
+            if (window.pageYOffset >= bannerTop) {
 
-                    sliderbar.style.position = 'fixed';
-                    sliderbar.style.top = sliderbarTop + 'px';
+                sliderbar.style.position = 'fixed';
+                sliderbar.style.top = sliderbarTop + 'px';
 
-                } else {
+            } else {
 
-                    sliderbar.style.position = 'absolute';
-                    sliderbar.style.top = '300px';
-                }
-                // 3.当页面滚到到main盒子 显示返回顶部
-                if (window.pageYOffset >= mainTop) {
-                    goBack.style.display = 'block';
-                } else {
-                    goBack.style.display = 'none';
-                }
+                sliderbar.style.position = 'absolute';
+                sliderbar.style.top = '300px';
+            }
+            // 3.当页面滚到到main盒子 显示返回顶部
+            if (window.pageYOffset >= mainTop) {
+                goBack.style.display = 'block';
+            } else {
+                goBack.style.display = 'none';
+            }
 
 
-            })
-            // 4.当我们点击返回顶部模块,就让窗口滚动到页面的最上方
+        });
+
+        // 4.当我们点击返回顶部模块,就让窗口滚动到页面的最上方
         goBack.addEventListener('click', function() {
             // window.scroll(0, 0);
             // x y 不加 px
