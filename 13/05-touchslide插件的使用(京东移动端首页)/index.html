@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <title>Document</title>
     <!-- 引入swiperjs文件 -->
-    <script src="js/swiper.min.js"></script>
+    <script src="js/TouchSlide.1.1.js"></script>
     <!-- 引入index.js文件 -->
     <script src="js/index.js"></script>
 </head>
@@ -42,23 +42,32 @@
         <!-- 滑动图 -->
         <div class="slider">
             <!-- 此处粘贴swper html代码 -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="upload/banner.dpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="upload/banner1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="upload/banner2.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="upload/banner3.jpg" alt="">
-                    </div>
+            <div id="slideBox" class="slideBox">
+
+                <div class="bd">
+                    <ul>
+                        <li>
+                            <a class="pic" href="#"><img src="upload/banner.dpg" /></a>
+                            <a class="tit" href="#">汤唯新片大卖请剧组吃回锅肉</a>
+                        </li>
+                        <li>
+                            <a class="pic" href="#"><img src="upload/banner1.jpg" /></a>
+                            <a class="tit" href="#">范冰冰黄晓明亲密无间</a>
+                        </li>
+                        <li>
+                            <a class="pic" href="#"><img src="upload/banner2.jpg" /></a>
+                            <a class="tit" href="#">一周体育快报</a>
+                        </li>
+                        <li>
+                            <a class="pic" href="#"><img src="upload/banner3.jpg" /></a>
+                            <a class="tit" href="#">金正恩携娇妻视察</a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+
+                <div class="hd">
+                    <ul></ul>
+                </div>
             </div>
         </div>
         <!-- 小家电品牌日 -->
