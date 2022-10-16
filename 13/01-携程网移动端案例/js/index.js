@@ -91,7 +91,19 @@ window.addEventListener('load', function() {
 
     });
 
-
+    // 返回顶部模块制作
+    var goBack = this.document.querySelector('.goBack');
+    var nav = this.document.querySelector('nav');
+    window.addEventListener('scroll', function() {
+        if (this.window.pageYOffset >= nav.offsetTop) {
+            goBack.style.display = 'block';
+        } else {
+            goBack.style.display = 'none';
+        }
+    });
+    goBack.addEventListener('click', function() {
+        window.scroll(0, 0);
+    })
 
 
 
