@@ -187,6 +187,13 @@ div {
     align-items: center;
 }
 
+.swiper-pagination-bullet {
+    background-color: #fff!important;
+}
+
+
+/*品牌日*/
+
 .brand {
     overflow: hidden;
     border-radius: 10px 10px 0 0;
